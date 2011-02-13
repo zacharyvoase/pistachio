@@ -1,9 +1,11 @@
+from calabash import sink
 from urecord import Record
 
 from pistachio.exceptions import SyntaxError
 from pistachio.parser.syntax import Template, Section
 
 
+@sink
 def parse(tokens):
     result = Template()
     current = result
@@ -22,7 +24,7 @@ def parse(tokens):
             pass
         else:
             current.append(token)
-    return result
+    yield result
 
 
 def unparse(tree):
