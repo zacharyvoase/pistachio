@@ -1,4 +1,5 @@
-# Pistachio
+Pistachio
+=========
 
 Pistachio is an experimental implementation of Mustache_ in Python.
 
